@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIYO'S FASHION</title>
+    <style>
+        body {
+            background: url(backg1.jpg)no-repeat center center/cover;
+            background-size: cover;
+            color: black;
+            height: 2000px;
+
+
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 439px;
+            top: 23px;
+
+
+        }
+
+        .mid {
+            border: 2px solid black;
+            position: absolute;
+            width: 39%;
+            left: 455px;
+            top: 18px;
+            padding: 0px;
+
+
+
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: overline black;
+
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 440px;
+            top: 24px;
+
+
+        }
+
+        .new {
+            width: 66px;
+            height: 65px;
+
+        }
+
+        .old {
+            width: 66px;
+            height: 65px;
+
+
+        }
+
+        .men {
+            display: inline-block;
+            position: relative;
+        }
+
+        .women {
+            display: inline-block;
+            position: absolute;
+        }
+
+        .boy {
+            display: inline-block;
+            position: absolute;
+        }
+
+        .girl {
+            display: inline-block;
+            position: absolute;
+
+
+        }
+
+        .section {
+            margin: 15px;
+            padding: 12px;
+            text-align: center;
+
+
+        }
+
+        .MEN:hover {
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+            user-select: text;
+        }
+
+        .WOMEN:hover {
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+
+        }
+
+        .BOY:hover {
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+
+
+        }
+
+        .GIRL:hover {
+            color: black;
+            font-weight: bolder;
+            font-size: larger;
+
+        }
+
+        a {
+            color: rgb(88, 83, 83);
+            list-style: none;
+            text-decoration: none;
+
+        }
+
+        .gen {
+            border: 2px solid palevioletred;
+        }
+
+        .MEN {
+            border: 2px solid white;
+            height: 65px;
+            border-radius: 2px;
+            font-size: larger;
+            color: rgb(88, 83, 83);
+            position: absolute;
+            width: 138px;
+            display: inline-block;
+            top: 92px;
+            right: 441px;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px grey;
+            z-index: 1;
+            position: absolute;
+            right: 442px;
+            top: 148px;
+            padding: 26px;
+            margin: 0px;
+            line-height: 30px;
+
+        }
+
+        .dropdown a {
+            color: black;
+
+        }
+
+        .dropdown a:hover {
+            background-color: #ddd;
+
+
+        }
+
+        .men:hover .dropdown {
+            display: block;
+
+        }
+
+        .men:hover .MEN {
+            background-color: grey;
+        }
+
+        .ni {
+            text-align: center;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .WOMEN {
+            border: 2px solid white;
+            border-radius: 2px;
+            color: rgb(88, 83, 83);
+            display: inline-block;
+            width: 138px;
+            height: 65px;
+            position: absolute;
+            right: 217px;
+            top: 106px;
+            font-size: larger;
+
+        }
+
+        .adropdown {
+            display: none;
+            position: absolute;
+            right: 218px;
+            top: 159px;
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px grey;
+            z-index: 1;
+            padding: 26px;
+            margin: 0px;
+            line-height: 30px;
+        }
+
+        .adropdown a {
+            color: black;
+        }
+
+        .adropdown a:hover {
+            background-color: #ddd;
+
+
+        }
+
+        .women:hover .adropdown {
+            display: block;
+        }
+
+        .women:hover .WOMEN {
+            background-color: grey;
+
+        }
+
+        .pi {
+            text-align: center;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .BOY {
+            border: 2px solid white;
+            border-radius: 2px;
+            color: rgb(88, 83, 83);
+            display: inline-block;
+            width: 138px;
+            height: 65px;
+            position: absolute;
+            left: 435px;
+            top: 106px;
+            font-size: larger;
+        }
+
+        .GIRL {
+            border: 2px solid white;
+            border-radius: 2px;
+            color: rgb(88, 83, 83);
+            display: inline-block;
+            width: 138px;
+            height: 65px;
+            position: absolute;
+            left: 209px;
+            top: 106px;
+            font-size: larger;
+        }
+
+        .bdropdown {
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px grey;
+            z-index: 1;
+            display: none;
+            position: absolute;
+            left: 437px;
+            top: 161px;
+            padding: 32px;
+            margin: 0px;
+            line-height: 30px;
+
+        }
+
+        .cdropdown {
+            background-color: white;
+            box-shadow: 0px 8px 16px 0px grey;
+            z-index: 1;
+            display: none;
+            position: absolute;
+            left: 211px;
+            top: 161px;
+            padding: 31px;
+            margin: 0px;
+            line-height: 30px;
+        }
+
+        .bdropdown a {
+            color: black;
+        }
+
+        .cdropdown a {
+            color: black;
+        }
+
+        .bdropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .cdropdown a:hover {
+            background-color: #ddd;
+        }
+
+        .boy:hover .bdropdown {
+            display: block;
+        }
+
+        .boy:hover .BOY {
+            background-color: grey;
+
+        }
+
+        .ji {
+            text-align: center;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        .girl:hover .cdropdown {
+            display: block;
+        }
+
+        .girl:hover .GIRL {
+            background-color: grey;
+
+        }
+
+        .hi {
+            text-align: center;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        #banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            position: absolute;
+            top: 40%;
+
+        }
+
+        #banner1 {
+            width: 90%;
+
+        }
+
+        #tandc {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border: 2px solid white;
+            position: absolute;
+            top: 165%;
+            background-color: white;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        .btndiv {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            padding: 10px;
+            font-size: medium;
+
+        }
+
+        #center {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        #tandc p {
+            font-size: medium;
+            font-weight: 400;
+        }
+
+        .logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .logos img {
+            height: 45px;
+
+        }
+
+        .logoitem {
+            margin: 10px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        .logosection{
+            position: absolute;
+            top: 230%;
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            left: 6%;
+
+        }
+
+        #center1{
+            font-size: xx-large;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        footer{
+            border: 2px solid black;
+            position: absolute;
+            top: 282%;
+            width: 100%;
+            text-align: center;
+            color: white;
+            background-color: black;
+            padding: 12px 20px;
+            right: 1px;
+        }
+
+        #tandc button{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="mid">
+            <h1>NIYO'S FASHION</h1>
+
+        </div>
+        <div class="section">
+            <div class="men">
+                <button class="MEN">MEN</button>
+                <div class="dropdown">
+                    <a class="ni" href="#">Topwear</a>
+                    <a class="ni" href="#">Bottomwear</a>
+                    <a class="ni" href="#">Festivewear</a>
+                    <a class="ni" href="#">Innerwear</a>
+                    <a class="ni" href="#">Sleepwear</a>
+                    <a class="ni" href="#">Footwear</a>
+                    <a class="ni" href="#">Activewear</a>
+                    <a class="ni" href="#">Grooming</a>
+                    <a class="ni" href="#">Accessories</a>
+                </div>
+            </div>
+            <div class="women">
+                <button class="WOMEN">WOMEN</button>
+                <div class="adropdown">
+                    <a class="pi" href="#">Topwear</a>
+                    <a class="pi" href="#">Bottomwear</a>
+                    <a class="pi" href="#">Sleepwear</a>
+                    <a class="pi" href="#">Lingerie</a>
+                    <a class="pi" href="#">Footwear</a>
+                    <a class="pi" href="#">Activewear</a>
+                    <a class="pi" href="#">Beauty</a>
+                    <a class="pi" href="#">Jewellery</a>
+                    <a class="pi" href="#">Indian wear</a>
+                </div>
+            </div>
+            <div class="boy">
+                <button class="BOY">BOYS</button>
+                <div class="bdropdown">
+                    <a class="ji" href="#">T-shirts</a>
+                    <a class="ji" href="#">Shirts</a>
+                    <a class="ji" href="#">Shorts</a>
+                    <a class="ji" href="#">Jeans</a>
+                    <a class="ji" href="#">Trousera</a>
+                    <a class="ji" href="#">Clothing Sets</a>
+                    <a class="ji" href="#">Innerwear</a>
+                    <a class="ji" href="#">Sleepwear</a>
+                    <a class="ji" href="#">Ethnic wear</a>
+                </div>
+            </div>
+            <div class="girl">
+                <button class="GIRL">GIRLS</button>
+                <div class="cdropdown">
+                    <a class="hi" href="#">Dresses</a>
+                    <a class="hi" href="#">Tops</a>
+                    <a class="hi" href="#">T-shirts</a>
+                    <a class="hi" href="#">Jumpsuits</a>
+                    <a class="hi" href="#">Skirts</a>
+                    <a class="hi" href="#">Shorts</a>
+                    <a class="hi" href="#">Jeans</a>
+                    <a class="hi" href="#">Innerwear</a>
+                    <a class="hi" href="#">Sleepwear</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="banner">
+        <img src="/banner1.jpg" alt="" id="banner1">
+    </section>
+
+
+    <section id="tandc">
+        <h3 id="center">Read our Terms & Conditions here</h3>
+        <div id="maindiv">
+            <div class="paradiv">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. At doloremque quo rerum voluptas.
+                    Perspiciatis quasi voluptatem modi at minima atque amet, distinctio accusantium est tempore dolorem
+                    ab quod. Commodi, rem esse optio dolorum, aut cum sunt perspiciatis quos porro pariatur culpa et
+                    laborum, eos eum mollitia minus eligendi est dicta.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe explicabo facere debitis quasi,
+                    veniam nulla tenetur, sit aut nostrum autem ea vitae quos repellendus numquam porro sequi. Earum,
+                    iure. Possimus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, aspernatur. Maiores minus obcaecati
+                    tempora similique porro facilis hic consequuntur nostrum commodi molestiae consectetur assumenda
+                    voluptatum natus quisquam praesentium ipsam omnis consequatur aliquam voluptatem perspiciatis nobis,
+                    explicabo facere dolores. Temporibus error quod a nemo aperiam nihil vel sequi tempore suscipit
+                    totam!
+                </p>
+            </div>
+            <div class="btndiv">
+                <button>
+                    Read more >>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="logosection">
+        <h3 id="center1">Contact Us</h3>
+        <div class="logos">
+            <div class="logoitem">
+                <img src="/fbfinalogo.png" alt="">
+            </div>
+            <div class="logoitem">
+                <img src="/instafinalogo.png" alt="">
+            </div>
+            <div class="logoitem">
+                <img src="/ctwitterlogo.png" alt="">
+            </div>
+            <div class="logoitem">
+                <img src="/gmailfinalogo.png" alt="">
+            </div>
+            <div class="logoitem">
+                <img src="/callfinalogo.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.niyofashion.com. All Rights Reserved!.
+        </div>
+    </footer>
+
+</body>
+
+</html>
